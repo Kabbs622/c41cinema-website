@@ -37,7 +37,6 @@
         <div class="nav-links">
             <a href="#work">Work</a>
             <a href="#services">Services</a>
-            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -48,102 +47,93 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </div>
 
-    <!-- Hero -->
+    <!-- Hero: full-bleed image -->
     <section class="hero">
-        <p class="hero-tag">Creative agency / Utah</p>
-        <h1>We make campaigns<br>that <span class="accent">actually sell.</span></h1>
-        <p class="hero-sub">Strategy, production, and performance. Not pretty work that sits on a shelf. Work that moves product and grows brands.</p>
-        <a href="#work" class="hero-cta">See the work</a>
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1727451139462-cd34008cd50b?w=1800&q=80&fit=crop&auto=format" alt="Film production set">
+        </div>
+        <div class="hero-content">
+            <h1>Campaigns that actually sell.</h1>
+            <p class="hero-sub">Strategy, production, and performance for brands that want results, not just pretty content.</p>
+            <a href="#work" class="hero-cta">See the work <span class="arrow">→</span></a>
+        </div>
+        <span class="hero-scroll">Scroll ↓</span>
     </section>
-
-    <!-- Stats -->
-    <div class="stats-bar">
-        <div class="stat">
-            <span class="stat-num">$5M+</span>
-            <span class="stat-label">Client Revenue</span>
-        </div>
-        <div class="stat">
-            <span class="stat-num">9.5M</span>
-            <span class="stat-label">Views, One Campaign</span>
-        </div>
-        <div class="stat">
-            <span class="stat-num">50+</span>
-            <span class="stat-label">Projects Delivered</span>
-        </div>
-    </div>
 
     <!-- Work -->
     <section class="work" id="work">
-        <div class="section-header">
-            <h2>Selected Work</h2>
-        </div>
+        <span class="section-label">Selected Work</span>
 
         <div class="work-grid">
-            <!-- Ozlo: featured full width -->
-            <div class="work-item featured">
+            <!-- Featured: Ozlo -->
+            <div class="work-item work-featured">
                 <img src="https://images.unsplash.com/photo-1557860855-159a8c0d18f7?w=1400&q=80&fit=crop&auto=format" alt="Ozlo Sleep campaign">
-                <div class="work-item-info">
+                <div class="work-item-overlay">
                     <span class="work-item-cat">Commercial</span>
                     <div class="work-item-title">Ozlo Sleep</div>
                     <div class="work-item-stat">9.5M views on YouTube</div>
                 </div>
             </div>
 
-            <!-- Moontax -->
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=900&q=80&fit=crop&auto=format" alt="Moontax campaign">
-                <div class="work-item-info">
-                    <span class="work-item-cat">Brand Campaign</span>
-                    <div class="work-item-title">Moontax</div>
+            <!-- Row: Moontax + Hella -->
+            <div class="work-row">
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=900&q=80&fit=crop&auto=format" alt="Moontax campaign">
+                    <div class="work-item-overlay">
+                        <span class="work-item-cat">Brand Campaign</span>
+                        <div class="work-item-title">Moontax</div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Hella Roller -->
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=900&q=80&fit=crop&auto=format" alt="Hella Roller campaign">
-                <div class="work-item-info">
-                    <span class="work-item-cat">Product</span>
-                    <div class="work-item-title">Hella Roller</div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=900&q=80&fit=crop&auto=format" alt="Hella Roller campaign">
+                    <div class="work-item-overlay">
+                        <span class="work-item-cat">Product</span>
+                        <div class="work-item-title">Hella Roller</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About strip -->
+    <div class="about-strip" id="about">
+        <div class="about-strip-inner">
+            <p>Too many agencies make beautiful work that doesn't sell anything. We started C41 because we think that's a waste of everyone's time. <span class="accent">$5M+ in client revenue. 9.5M views on a single campaign.</span> Small team. No fluff. Based in Utah.</p>
+        </div>
+    </div>
+
     <!-- Services -->
     <section class="services" id="services">
-        <div class="section-header">
-            <h2>Services</h2>
-        </div>
+        <span class="section-label">What We Do</span>
 
         <div class="services-list">
             <div class="svc-item">
                 <span class="svc-num">01</span>
                 <span class="svc-name">Video Production</span>
-                <span class="svc-desc">Commercials, branded content, social ads. Stories that make people stop scrolling and start buying.</span>
+                <span class="svc-desc">Commercials, branded content, social ads. Stories that stop the scroll and move product.</span>
             </div>
             <div class="svc-item">
                 <span class="svc-num">02</span>
                 <span class="svc-name">Ad Campaigns</span>
-                <span class="svc-desc">Strategy, media buying, and performance tracking. We spend your budget like it's ours.</span>
+                <span class="svc-desc">Strategy, media buying, performance. We spend your budget like it's ours.</span>
             </div>
             <div class="svc-item">
                 <span class="svc-num">03</span>
                 <span class="svc-name">Web Design</span>
-                <span class="svc-desc">Websites that convert. Clean, fast, custom-built to turn visitors into customers.</span>
+                <span class="svc-desc">Sites that convert. Clean, fast, built to turn visitors into customers.</span>
             </div>
             <div class="svc-item">
                 <span class="svc-num">04</span>
                 <span class="svc-name">Social Media</span>
-                <span class="svc-desc">Content your audience actually wants to see. We create, manage, and grow your presence.</span>
+                <span class="svc-desc">Content people actually want to see. We create, manage, and grow your presence.</span>
             </div>
             <div class="svc-item">
                 <span class="svc-num">05</span>
                 <span class="svc-name">Content Training</span>
-                <span class="svc-desc">We teach your team to shoot their own content. Build the skill now, scale later.</span>
+                <span class="svc-desc">We teach your team to make their own content. Build the skill, then scale.</span>
             </div>
             <div class="svc-item">
                 <span class="svc-num">06</span>
@@ -155,7 +145,7 @@
 
     <!-- Clients -->
     <section class="clients">
-        <h2>Selected Clients</h2>
+        <span class="section-label">Selected Clients</span>
         <div class="client-list">
             <span>Ozlo Sleep</span><span class="sep">,</span>
             <span>Moontax</span><span class="sep">,</span>
@@ -163,22 +153,11 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="about-inner">
-            <p class="about-quote">Too many agencies make beautiful work that <span class="accent">doesn't sell anything.</span></p>
-            <div class="about-body">
-                <p>We started C41 because we think that's a waste of everyone's time and money. Every project begins with a business goal. Every decision serves that goal.</p>
-                <p>Over $5 million in client revenue. 9.5 million views on a single campaign. Small team, no overhead, no fluff. Based in Utah, working with brands everywhere.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="contact-inner">
             <div class="contact-left">
-                <h2>Let's work<br>together.</h2>
+                <h2>Let's<br>work.</h2>
             </div>
             <div class="contact-right">
                 <p class="contact-sub">Tell us what you're working on. We'll get back within 24 hours.</p>
@@ -201,7 +180,7 @@
                         <option value="Not Sure">Not sure yet</option>
                     </select>
                     <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
-                    <button type="submit">Send message</button>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -217,7 +196,6 @@
             <div class="footer-right">
                 <a href="#work">Work</a>
                 <a href="#services">Services</a>
-                <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
