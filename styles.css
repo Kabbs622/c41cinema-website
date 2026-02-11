@@ -440,6 +440,11 @@ img { display: block; max-width: 100%; }
     transform: translateY(-1px);
 }
 
+.lead-magnet-form .form-note {
+    font-size: 0.75rem;
+    color: var(--dim);
+}
+
 /* ===== PROCESS ===== */
 .process {
     padding: var(--section-pad) var(--page-pad);
@@ -705,9 +710,12 @@ img { display: block; max-width: 100%; }
     justify-content: space-between;
     align-items: center;
     transition: color 0.2s;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::-webkit-details-marker,
+.faq-item summary::marker { display: none; content: ''; }
 
 .faq-item summary::after {
     content: '+';
