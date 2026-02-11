@@ -1,18 +1,6 @@
 (function() {
     'use strict';
 
-    // Scroll reveal
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                obs.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.anim, .anim-d1').forEach(el => obs.observe(el));
-
     // Nav scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -46,4 +34,18 @@
             if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
         });
     });
+
+    // Parallax on hero images
+    const img1 = document.querySelector('.hero-img-1');
+    const img2 = document.querySelector('.hero-img-2');
+    
+    if (img1 && img2 && window.innerWidth > 900) {
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            if (y < window.innerHeight) {
+                img1.style.transform = `translateY(${y * 0.08}px)`;
+                img2.style.transform = `translateY(${y * -0.05}px)`;
+            }
+        }, { passive: true });
+    }
 })();

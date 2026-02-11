@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     <script type="application/ld+json">
@@ -38,7 +38,7 @@
             <a href="#work">Work</a>
             <a href="#services">Services</a>
             <a href="#about">About</a>
-            <a href="#contact" class="nav-cta">Start a project</a>
+            <a href="#contact">Contact</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span>
@@ -49,162 +49,154 @@
         <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#contact">Start a project</a>
+        <a href="#contact">Contact</a>
     </div>
 
-    <!-- Hero -->
+    <!-- Hero: split layout -->
     <section class="hero">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1727451139462-cd34008cd50b?w=1800&q=80&fit=crop&auto=format" alt="Film production set" loading="eager">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="hero-content">
+        <div class="hero-left">
             <p class="hero-tag">Creative agency / Utah</p>
-            <h1>We build campaigns that sell.</h1>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="stat-num">$5M+</span>
-                    <span class="stat-label">Revenue generated for clients</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="hero-stat">
-                    <span class="stat-num">9.5M</span>
-                    <span class="stat-label">Views on a single campaign</span>
-                </div>
+            <h1>We build campaigns<br>that sell.</h1>
+            <p class="hero-sub">Video production. Ad campaigns. Websites. Strategy. One team that does it all and only cares about one thing: did it work.</p>
+            <div class="hero-numbers">
+                <div><span class="num">$5M+</span><span class="num-label">client revenue</span></div>
+                <div><span class="num">9.5M</span><span class="num-label">views, one campaign</span></div>
             </div>
         </div>
-        <a href="#work" class="hero-arrow" aria-label="Scroll down">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
+        <div class="hero-right">
+            <div class="hero-img-stack">
+                <img src="https://images.unsplash.com/photo-1727451139462-cd34008cd50b?w=900&q=80&fit=crop&auto=format" alt="Film set" class="hero-img-1">
+                <img src="https://images.unsplash.com/photo-1597263072753-4de3104bc665?w=600&q=80&fit=crop&auto=format" alt="Camera" class="hero-img-2">
+            </div>
+        </div>
     </section>
 
-    <!-- Work -->
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Video Production</span><span class="dot"></span>
+            <span>Ad Campaigns</span><span class="dot"></span>
+            <span>Web Design</span><span class="dot"></span>
+            <span>Social Media</span><span class="dot"></span>
+            <span>Content Training</span><span class="dot"></span>
+            <span>AI Consulting</span><span class="dot"></span>
+            <span>Video Production</span><span class="dot"></span>
+            <span>Ad Campaigns</span><span class="dot"></span>
+            <span>Web Design</span><span class="dot"></span>
+            <span>Social Media</span><span class="dot"></span>
+            <span>Content Training</span><span class="dot"></span>
+            <span>AI Consulting</span><span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- Work: magazine spreads -->
     <section class="work" id="work">
-        <div class="container">
-            <div class="section-header">
-                <h2>Selected work</h2>
-                <p>Campaigns built around one goal: results.</p>
+        <div class="work-intro">
+            <span class="label">Selected Work</span>
+            <h2>The proof is in<br>the results.</h2>
+        </div>
+
+        <!-- Project 1: image left, text right -->
+        <div class="spread spread-1">
+            <div class="spread-img">
+                <img src="https://images.unsplash.com/photo-1557860855-159a8c0d18f7?w=1000&q=80&fit=crop&auto=format" alt="Ozlo Sleep production">
             </div>
+            <div class="spread-text">
+                <span class="label">Commercial</span>
+                <h3>Ozlo Sleep</h3>
+                <p>A love story about snoring that pulled 9.5 million views on YouTube. We built the story around the relationship, not the product. By the time the Sleepbuds showed up, they felt like a resolution.</p>
+                <span class="spread-stat">9.5M views</span>
+            </div>
+        </div>
 
-            <div class="work-grid">
-                <a href="#" class="project project-featured">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1557860855-159a8c0d18f7?w=1200&q=80&fit=crop&auto=format" alt="Ozlo Sleep campaign" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-label">Commercial</span>
-                        <h3>Ozlo Sleep</h3>
-                        <p>A love story about snoring that pulled 9.5 million views on YouTube.</p>
-                        <span class="project-metric">9.5M views</span>
-                    </div>
-                </a>
+        <!-- Project 2: text left, image right -->
+        <div class="spread spread-2">
+            <div class="spread-text">
+                <span class="label">Brand Campaign</span>
+                <h3>Moontax</h3>
+                <p>Crypto taxes are confusing. We made them feel simple. Real people, honest moments, zero jargon. Content that connected because it treated the audience like humans, not wallets.</p>
+                <span class="spread-stat">Campaign series</span>
+            </div>
+            <div class="spread-img">
+                <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=1000&q=80&fit=crop&auto=format" alt="Moontax production">
+            </div>
+        </div>
 
-                <a href="#" class="project">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=800&q=80&fit=crop&auto=format" alt="Moontax campaign" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-label">Brand Campaign</span>
-                        <h3>Moontax</h3>
-                        <p>Making crypto taxes feel human. Real people, simple stories.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="project">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=800&q=80&fit=crop&auto=format" alt="Hella Roller campaign" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-label">Product</span>
-                        <h3>Hella Roller</h3>
-                        <p>A product demo that people actually want to watch.</p>
-                    </div>
-                </a>
+        <!-- Project 3: full bleed -->
+        <div class="spread spread-3">
+            <div class="spread-img spread-img-full">
+                <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=1400&q=80&fit=crop&auto=format" alt="Hella Roller production">
+                <div class="spread-overlay">
+                    <span class="label">Product</span>
+                    <h3>Hella Roller</h3>
+                    <p>We took a back roller and made it unforgettable. Fast cuts, honest frustration, just enough absurdity to make people actually watch the whole thing.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services: horizontal layout with big numbers -->
     <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>What we do</h2>
-                <p>Everything your brand needs under one roof.</p>
-            </div>
+        <div class="services-top">
+            <span class="label">What We Do</span>
+            <h2>Six ways we<br>grow your brand.</h2>
+        </div>
 
-            <div class="services-grid">
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                    </div>
-                    <h3>Video Production</h3>
-                    <p>Commercials, branded content, and social ads. Stories that make people stop and pay attention.</p>
-                </div>
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                    </div>
-                    <h3>Ad Campaigns</h3>
-                    <p>Strategy, media buying, and performance tracking. We spend your budget like it's ours.</p>
-                </div>
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Websites that convert. Clean, fast, custom-built to turn visitors into customers.</p>
-                </div>
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-                    </div>
-                    <h3>Social Media</h3>
-                    <p>Content your audience actually wants to see. We create, manage, and grow your presence.</p>
-                </div>
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                    </div>
-                    <h3>Content Training</h3>
-                    <p>We spend a day with your team teaching you to shoot your own content. Build the skill now, scale with us later.</p>
-                </div>
-                <div class="svc">
-                    <div class="svc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-                    </div>
-                    <h3>AI Consulting</h3>
-                    <p>The tools exist. Most businesses don't know how to use them. We help you integrate AI to move faster and spend less.</p>
-                </div>
+        <div class="services-scroll">
+            <div class="svc-card">
+                <span class="svc-n">01</span>
+                <h3>Video Production</h3>
+                <p>Commercials, branded content, social ads. Stories that make people stop scrolling and start buying.</p>
+            </div>
+            <div class="svc-card">
+                <span class="svc-n">02</span>
+                <h3>Ad Campaigns</h3>
+                <p>Strategy, media buying, and performance tracking. We spend your budget like it's ours.</p>
+            </div>
+            <div class="svc-card">
+                <span class="svc-n">03</span>
+                <h3>Web Design</h3>
+                <p>Websites that convert. Clean, fast, custom-built to turn visitors into customers.</p>
+            </div>
+            <div class="svc-card">
+                <span class="svc-n">04</span>
+                <h3>Social Media</h3>
+                <p>Content your audience actually wants to see. We create, manage, and grow your presence.</p>
+            </div>
+            <div class="svc-card">
+                <span class="svc-n">05</span>
+                <h3>Content Training</h3>
+                <p>We spend a day with your team teaching you to shoot your own content. Build the skill now, scale later.</p>
+            </div>
+            <div class="svc-card">
+                <span class="svc-n">06</span>
+                <h3>AI Consulting</h3>
+                <p>The tools exist. We help you actually use them to move faster and spend less.</p>
             </div>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- About: big quote + body -->
     <section class="about" id="about">
-        <div class="container">
-            <div class="about-split">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1597263072753-4de3104bc665?w=800&q=80&fit=crop&auto=format" alt="Camera on film set" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <h2>We care about one thing: did it work?</h2>
-                    <p>Too many agencies make beautiful content that doesn't move the needle. C41 started because we think that's a waste of everyone's time and money.</p>
-                    <p>Every project begins with a business goal. Every decision serves that goal. Over $5 million in client revenue and 9.5 million views on a single campaign didn't happen by accident.</p>
-                    <p>Small team. No overhead. No fluff. Based in Utah, working with brands everywhere.</p>
-                </div>
+        <div class="about-inner">
+            <span class="label">About C41</span>
+            <blockquote>Too many agencies make beautiful work that doesn't sell anything.</blockquote>
+            <div class="about-cols">
+                <p>We started C41 because we think that's a waste of everyone's time and money. Every project begins with a business goal. Every decision serves that goal.</p>
+                <p>Over $5 million in client revenue. 9.5 million views on a single campaign. Small team, no overhead, no fluff. Based in Utah, working with brands everywhere.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-split">
-                <div class="contact-text">
-                    <h2>Start a project</h2>
-                    <p>Tell us what you're working on. If we're the right fit, we'll tell you. If we're not, we'll tell you that too.</p>
-                </div>
-                <form class="contact-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <h2>Let's make<br>something<br>together.</h2>
+            </div>
+            <div class="contact-right">
+                <p class="contact-sub">Tell us what you're working on. We'll get back within 24 hours.</p>
+                <form class="form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://kabbs622.github.io/c41cinema-website/thank-you.html">
                     <div class="form-row">
@@ -231,21 +223,19 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
+        <div class="footer-inner">
+            <div class="footer-left">
                 <span class="footer-logo">C41 Cinema</span>
-                <div class="footer-links">
-                    <a href="#work">Work</a>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
+                <span class="footer-loc">Utah</span>
             </div>
-            <div class="footer-bottom">
-                <span>&copy; 2025 C41 Cinema</span>
-                <span>Utah</span>
+            <div class="footer-right">
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
+        <div class="footer-copy">&copy; 2025 C41 Cinema</div>
     </footer>
 
     <script src="main.js"></script>
