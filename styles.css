@@ -46,45 +46,13 @@ a {
     text-decoration: none;
 }
 
-/* ---- Film grain overlay ---- */
-.grain {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    animation: grainShift 0.5s steps(1) infinite;
-}
-
-@keyframes grainShift {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(-2%, -2%); }
-    50% { transform: translate(1%, 1%); }
-    75% { transform: translate(-1%, 2%); }
-    100% { transform: translate(2%, -1%); }
-}
-
-/* ---- Letterbox bars ---- */
-.letterbox {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 3vh;
-    background: #000;
-    z-index: 9998;
-    pointer-events: none;
-}
-.letterbox-top { top: 0; }
-.letterbox-bottom { bottom: 0; }
+/* Grain and letterbox removed — clean modern look */
+.grain, .letterbox { display: none; }
 
 /* ---- Nav ---- */
 .nav {
     position: fixed;
-    top: 3vh;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 100;
@@ -216,8 +184,8 @@ a {
     display: flex;
     align-items: center;
     padding: 0 3rem;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .hero-inner {
@@ -737,9 +705,6 @@ a {
 }
 
 @media (max-width: 768px) {
-    .letterbox { height: 2vh; }
-    .hero { padding-top: 2vh; padding-bottom: 2vh; }
-    
     .hero-title {
         font-size: clamp(2.5rem, 10vw, 4rem);
     }
@@ -802,5 +767,5 @@ a {
 
 /* Scroll offset */
 section {
-    scroll-margin-top: calc(3vh + 60px);
+    scroll-margin-top: 80px;
 }
