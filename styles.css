@@ -308,7 +308,8 @@ img { display: block; max-width: 100%; }
 }
 
 .logo-track img {
-    height: 28px;
+    height: 30px;
+    min-width: 80px;
     width: auto;
     object-fit: contain;
     opacity: 0.5;
