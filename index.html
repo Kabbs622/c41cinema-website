@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     <script type="application/ld+json">
@@ -30,15 +30,18 @@
 </head>
 <body>
 
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
     <!-- Nav -->
     <nav class="nav" id="nav">
-        <a href="#" class="logo">C41 Cinema</a>
+        <a href="#" class="logo">C41<span>Cinema</span></a>
         <div class="nav-links">
             <a href="#work">Work</a>
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#faq">FAQ</a>
-            <a href="#contact" class="nav-cta">Start a project</a>
+            <a href="#contact" class="nav-cta">Start a project &rarr;</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span>
@@ -62,28 +65,55 @@
         </div>
         <div class="hero-content">
             <p class="hero-tag">Full-service creative agency / Utah</p>
-            <h1>Strategy, creative, and campaigns that turn attention into revenue.</h1>
-            <p class="hero-sub">Video production, advertising, web, social media, and brand strategy for companies that want measurable results, not just pretty content.</p>
+            <h1>We turn attention<br>into <em>revenue.</em></h1>
+            <p class="hero-sub">Video, ads, web, social, and brand strategy for companies that want results they can measure.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn-primary">Start a project</a>
-                <a href="#work" class="btn-secondary">See our work</a>
+                <a href="#contact" class="btn-primary">Start a project &rarr;</a>
+                <a href="#work" class="btn-ghost">See the work</a>
             </div>
         </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+        </div>
     </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Strategy</span><span class="dot"></span>
+            <span>Video Production</span><span class="dot"></span>
+            <span>Advertising</span><span class="dot"></span>
+            <span>Web Design</span><span class="dot"></span>
+            <span>Social Media</span><span class="dot"></span>
+            <span>Brand Identity</span><span class="dot"></span>
+            <span>Content Systems</span><span class="dot"></span>
+            <span>Creative Consulting</span><span class="dot"></span>
+            <span>Strategy</span><span class="dot"></span>
+            <span>Video Production</span><span class="dot"></span>
+            <span>Advertising</span><span class="dot"></span>
+            <span>Web Design</span><span class="dot"></span>
+            <span>Social Media</span><span class="dot"></span>
+            <span>Brand Identity</span><span class="dot"></span>
+            <span>Content Systems</span><span class="dot"></span>
+            <span>Creative Consulting</span><span class="dot"></span>
+        </div>
+    </div>
 
     <!-- TRUST BAR -->
     <section class="trust-bar">
         <div class="trust-stats">
             <div class="stat">
-                <span class="stat-num">$5M+</span>
+                <span class="stat-num" data-target="5">$0M+</span>
                 <span class="stat-label">Client revenue generated</span>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat">
-                <span class="stat-num">9.5M</span>
-                <span class="stat-label">Views on a single campaign</span>
+                <span class="stat-num" data-target="9.5">0M</span>
+                <span class="stat-label">Views, single campaign</span>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat">
-                <span class="stat-num">50+</span>
+                <span class="stat-num" data-target="50">0+</span>
                 <span class="stat-label">Projects delivered</span>
             </div>
         </div>
@@ -91,92 +121,109 @@
 
     <!-- FEATURED WORK -->
     <section class="work" id="work">
-        <div class="section-header">
-            <span class="small-label">Featured Work</span>
-            <h2>Results, not just reels.</h2>
+        <div class="section-label">
+            <span class="label-num">01</span>
+            <span class="label-text">Featured Work</span>
         </div>
+        <h2 class="section-title">Results, not just reels.</h2>
 
         <div class="work-grid">
             <a class="work-card" href="#">
                 <div class="work-img">
-                    <img src="https://images.unsplash.com/photo-1557860855-159a8c0d18f7?w=800&q=80&fit=crop&auto=format" alt="Ozlo Sleep campaign">
+                    <img src="https://images.unsplash.com/photo-1557860855-159a8c0d18f7?w=900&q=80&fit=crop&auto=format" alt="Ozlo Sleep campaign" loading="lazy">
+                    <div class="work-overlay">
+                        <span>View project &rarr;</span>
+                    </div>
                 </div>
                 <div class="work-info">
-                    <strong>Ozlo Sleep</strong>
-                    <span class="work-type">Brand Campaign + Social Strategy</span>
-                    <span class="work-result">9.5M views, 340% engagement increase</span>
+                    <div class="work-meta">
+                        <strong>Ozlo Sleep</strong>
+                        <span class="work-tags">Campaign / Social / Strategy</span>
+                    </div>
+                    <span class="work-result">9.5M views</span>
                 </div>
             </a>
             <a class="work-card" href="#">
                 <div class="work-img">
-                    <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=800&q=80&fit=crop&auto=format" alt="Moontax brand campaign">
+                    <img src="https://images.unsplash.com/photo-1620942617746-7784b7a1526f?w=900&q=80&fit=crop&auto=format" alt="Moontax brand campaign" loading="lazy">
+                    <div class="work-overlay">
+                        <span>View project &rarr;</span>
+                    </div>
                 </div>
                 <div class="work-info">
-                    <strong>Moontax</strong>
-                    <span class="work-type">Video + Paid Ads + Landing Page</span>
-                    <span class="work-result">2.1M impressions in first week</span>
+                    <div class="work-meta">
+                        <strong>Moontax</strong>
+                        <span class="work-tags">Video / Ads / Landing Page</span>
+                    </div>
+                    <span class="work-result">2.1M impressions</span>
                 </div>
             </a>
-            <a class="work-card" href="#">
+            <a class="work-card work-wide" href="#">
                 <div class="work-img">
-                    <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=800&q=80&fit=crop&auto=format" alt="Hella Roller product launch">
+                    <img src="https://images.unsplash.com/photo-1612180561225-0e5534bce97b?w=1200&q=80&fit=crop&auto=format" alt="Hella Roller product launch" loading="lazy">
+                    <div class="work-overlay">
+                        <span>View project &rarr;</span>
+                    </div>
                 </div>
                 <div class="work-info">
-                    <strong>Hella Roller</strong>
-                    <span class="work-type">Content System + Brand Identity</span>
-                    <span class="work-result">6 months of content from 2-day shoot</span>
+                    <div class="work-meta">
+                        <strong>Hella Roller</strong>
+                        <span class="work-tags">Content System / Brand Identity</span>
+                    </div>
+                    <span class="work-result">6 months of content, 2-day shoot</span>
                 </div>
             </a>
         </div>
 
-        <blockquote class="inline-quote">
-            <p>"C41 didn't just make us a video. They rebuilt our entire marketing system and it's still generating leads six months later."</p>
-            <cite>Client Name, Ozlo Sleep</cite>
+        <blockquote class="pull-quote">
+            <p>&ldquo;C41 rebuilt our entire marketing system. It&rsquo;s still generating leads six months later.&rdquo;</p>
+            <cite>&mdash; Client Name, Ozlo Sleep</cite>
         </blockquote>
     </section>
 
     <!-- SERVICES -->
     <section class="services" id="services">
-        <div class="section-header">
-            <span class="small-label">What We Do</span>
-            <h2>Full-service creative. One team. No runaround.</h2>
+        <div class="section-label">
+            <span class="label-num">02</span>
+            <span class="label-text">Services</span>
         </div>
+        <h2 class="section-title">Full-service creative.<br><em>One team. No runaround.</em></h2>
 
-        <div class="services-grid">
-            <div class="service-card">
+        <div class="services-list">
+            <div class="service-row">
                 <span class="service-num">01</span>
-                <h3>Video + Photo Production</h3>
-                <p>Commercials, brand films, product shoots, social content, event coverage. We handle the entire production so you show up, we do the rest.</p>
+                <div class="service-name">Video + Photo Production</div>
+                <p class="service-desc">Commercials, brand films, product shoots, social content, event coverage. Full production handled.</p>
             </div>
-            <div class="service-card">
+            <div class="service-row">
                 <span class="service-num">02</span>
-                <h3>Advertising + Paid Media</h3>
-                <p>We build and manage ad campaigns across Meta, YouTube, Google, and TikTok. Creative + media buying under one roof so your spend actually tracks back to revenue.</p>
+                <div class="service-name">Advertising + Paid Media</div>
+                <p class="service-desc">Campaign strategy, creative, and media buying across Meta, YouTube, Google, and TikTok. All under one roof.</p>
             </div>
-            <div class="service-card">
+            <div class="service-row">
                 <span class="service-num">03</span>
-                <h3>Web Design + Development</h3>
-                <p>Websites that convert visitors into leads, not digital brochures. Landing pages, full sites, and e-commerce builds designed around your sales process.</p>
+                <div class="service-name">Web Design + Development</div>
+                <p class="service-desc">Sites that convert visitors into leads. Landing pages, full builds, e-commerce. Designed around your sales process.</p>
             </div>
-            <div class="service-card">
+            <div class="service-row">
                 <span class="service-num">04</span>
-                <h3>Social Media + Content Strategy</h3>
-                <p>We build content systems: one shoot becomes months of strategic content across every platform. Planning, production, scheduling, and reporting.</p>
+                <div class="service-name">Social Media + Content</div>
+                <p class="service-desc">Content systems that turn one shoot into months of strategic posts. Planning, production, scheduling, reporting.</p>
             </div>
-            <div class="service-card">
+            <div class="service-row">
                 <span class="service-num">05</span>
-                <h3>Brand Strategy + Identity</h3>
-                <p>Positioning, messaging, visual identity, and brand guidelines. We figure out what makes you different and build a system to communicate it consistently.</p>
+                <div class="service-name">Brand Strategy + Identity</div>
+                <p class="service-desc">Positioning, messaging, visual identity, brand guidelines. We find what makes you different and make it consistent.</p>
             </div>
-            <div class="service-card">
+            <div class="service-row">
                 <span class="service-num">06</span>
-                <h3>Creative Consulting + Training</h3>
-                <p>Need to build internal capabilities? We train teams on content creation, ad strategy, and marketing systems. Also available for fractional creative director work.</p>
+                <div class="service-name">Creative Consulting</div>
+                <p class="service-desc">Team training on content creation and ad strategy. Fractional creative director work. Build internal capabilities.</p>
             </div>
         </div>
 
-        <div class="services-cta">
-            <a href="#contact" class="btn-primary">Tell us what you need</a>
+        <div class="section-cta">
+            <a href="#contact" class="btn-primary">Tell us what you need &rarr;</a>
         </div>
     </section>
 
@@ -184,10 +231,10 @@
     <section class="lead-magnet">
         <div class="lead-magnet-inner">
             <div class="lead-magnet-text">
-                <span class="small-label">Free Resource</span>
-                <h2>The Brand Growth Audit</h2>
-                <p>5 questions to figure out where your marketing is leaking money, and what to fix first. Takes 2 minutes. No fluff, no upsell.</p>
-                <ul class="lead-magnet-points">
+                <span class="lead-magnet-badge">Free Resource</span>
+                <h2>The Brand<br><em>Growth Audit</em></h2>
+                <p>5 questions to find where your marketing is leaking money. Takes 2 minutes.</p>
+                <ul class="check-list">
                     <li>Identify your biggest growth bottleneck</li>
                     <li>See where your budget is actually going</li>
                     <li>Get a prioritized action plan</li>
@@ -195,10 +242,10 @@
             </div>
             <form class="lead-magnet-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Brand Growth Audit request from C41 website">
+                <input type="hidden" name="_subject" value="Brand Growth Audit request">
                 <input type="hidden" name="_next" value="https://kabbs622.github.io/c41cinema-website/thank-you.html">
                 <input type="email" name="email" placeholder="Your email" required>
-                <button type="submit">Get the free audit</button>
+                <button type="submit">Get the free audit &rarr;</button>
                 <span class="form-note">No spam. Unsubscribe anytime.</span>
             </form>
         </div>
@@ -206,26 +253,27 @@
 
     <!-- PROCESS -->
     <section class="process">
-        <div class="section-header">
-            <span class="small-label">How It Works</span>
-            <h2>Three steps. No mystery.</h2>
+        <div class="section-label">
+            <span class="label-num">03</span>
+            <span class="label-text">Process</span>
         </div>
+        <h2 class="section-title">Three steps.<br><em>No mystery.</em></h2>
 
         <div class="process-grid">
             <div class="process-step">
-                <span class="step-num">01</span>
-                <h3>Discovery Call</h3>
-                <p>We learn your business, your goals, and what's not working. Free, no pitch. If we're not the right fit, we'll tell you.</p>
+                <div class="step-marker">01</div>
+                <h3>Discovery</h3>
+                <p>We learn your business, goals, and what&rsquo;s not working. Free call, no pitch. If we&rsquo;re not the right fit, we&rsquo;ll say so.</p>
             </div>
             <div class="process-step">
-                <span class="step-num">02</span>
+                <div class="step-marker">02</div>
                 <h3>Strategy + Execution</h3>
-                <p>We build the plan and handle everything: creative, production, web, ads, content. All tied to specific business outcomes, not vanity metrics.</p>
+                <p>We build the plan and handle everything: creative, production, web, ads, content. Tied to business outcomes, not vanity metrics.</p>
             </div>
             <div class="process-step">
-                <span class="step-num">03</span>
+                <div class="step-marker">03</div>
                 <h3>Launch + Optimize</h3>
-                <p>Everything goes live with a distribution plan. We track performance, optimize what's working, and adjust what isn't. You see the numbers.</p>
+                <p>Everything goes live with a distribution plan. We track performance, optimize what works, adjust what doesn&rsquo;t. You see the numbers.</p>
             </div>
         </div>
     </section>
@@ -233,39 +281,44 @@
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="about-content">
-            <span class="small-label">About C41</span>
-            <h2>Small team. No overhead. Real results.</h2>
-            <p>Too many agencies specialize in one thing and outsource the rest. You end up managing five vendors to run one campaign. We started C41 to fix that.</p>
-            <p>We're a full-service creative team based in Utah. Video, ads, web, social, brand. One team handles it all, so everything works together. No layers of account managers between you and the people doing the work.</p>
-            <p>Over $5 million in revenue generated for our clients. 9.5 million views on a single campaign. We measure success by your bottom line, not our portfolio.</p>
+            <div class="section-label">
+                <span class="label-num">04</span>
+                <span class="label-text">About</span>
+            </div>
+            <h2 class="section-title">Small team.<br>No overhead.<br><em>Real results.</em></h2>
+            <div class="about-body">
+                <p>Too many agencies specialize in one thing and outsource the rest. You end up managing five vendors for one campaign.</p>
+                <p>We&rsquo;re a full-service creative team based in Utah. Video, ads, web, social, brand. One team handles it all. No account managers between you and the people doing the work.</p>
+                <p>Over $5 million in revenue generated for our clients. 9.5 million views on a single campaign. We measure success by your bottom line.</p>
+            </div>
         </div>
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1597263072753-4de3104bc665?w=800&q=80&fit=crop&auto=format" alt="C41 Cinema team on set">
+            <img src="https://images.unsplash.com/photo-1597263072753-4de3104bc665?w=900&q=80&fit=crop&auto=format" alt="C41 Cinema on set" loading="lazy">
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="testimonials">
-        <div class="section-header">
-            <span class="small-label">What Clients Say</span>
-        </div>
         <div class="testimonial-grid">
             <div class="testimonial-card">
-                <p>"They handled everything: the video, the ads, the landing page. We didn't have to manage three different vendors. ROI was clear within the first month."</p>
+                <div class="quote-mark">&ldquo;</div>
+                <p>They handled everything: the video, the ads, the landing page. We didn&rsquo;t have to manage three different vendors. ROI was clear within the first month.</p>
                 <div class="testimonial-author">
                     <strong>Client Name</strong>
                     <span>Title, Company</span>
                 </div>
             </div>
             <div class="testimonial-card">
-                <p>"C41 gave us six months of content from a two-day shoot, then built the ad campaigns to distribute it. The whole system is still running."</p>
+                <div class="quote-mark">&ldquo;</div>
+                <p>C41 gave us six months of content from a two-day shoot, then built the ad campaigns to distribute it. The whole system is still running.</p>
                 <div class="testimonial-author">
                     <strong>Client Name</strong>
                     <span>Title, Company</span>
                 </div>
             </div>
             <div class="testimonial-card">
-                <p>"Like having a full creative department without the overhead. Video, web, social, strategy. One team that actually gets it."</p>
+                <div class="quote-mark">&ldquo;</div>
+                <p>Like having a full creative department without the overhead. Video, web, social, strategy. One team that actually gets it.</p>
                 <div class="testimonial-author">
                     <strong>Client Name</strong>
                     <span>Title, Company</span>
@@ -276,35 +329,36 @@
 
     <!-- FAQ -->
     <section class="faq" id="faq">
-        <div class="section-header">
-            <span class="small-label">Frequently Asked</span>
-            <h2>Questions we get a lot.</h2>
+        <div class="section-label">
+            <span class="label-num">05</span>
+            <span class="label-text">FAQ</span>
         </div>
+        <h2 class="section-title">Questions we<br><em>get a lot.</em></h2>
 
         <div class="faq-list">
             <details class="faq-item">
                 <summary>How much does a project cost?</summary>
-                <p>It depends on scope. A single video project might start around $3,000-5,000. A full campaign with video, ads, web, and content strategy could range from $10,000-25,000+. We'll always give you a clear quote before any work starts, and we'll tell you honestly if your budget doesn't match your goals.</p>
+                <p>It depends on scope. A single video project starts around $3,000-5,000. A full campaign with video, ads, web, and content strategy ranges from $10,000-25,000+. We always give a clear quote before work starts, and we&rsquo;ll tell you honestly if your budget doesn&rsquo;t match your goals.</p>
             </details>
             <details class="faq-item">
-                <summary>What makes C41 different from other agencies?</summary>
-                <p>Most agencies do one thing well and outsource the rest. You end up managing multiple vendors for one campaign. We handle video, ads, web, social, and brand under one roof. One team, one point of contact, everything built to work together. And we're small enough that you talk directly to the people doing the work.</p>
+                <summary>What makes C41 different?</summary>
+                <p>Most agencies do one thing well and outsource the rest. You end up managing multiple vendors. We handle video, ads, web, social, and brand under one roof. One team, one point of contact, everything built to work together.</p>
             </details>
             <details class="faq-item">
-                <summary>How long does a typical project take?</summary>
-                <p>A single video: 2-4 weeks from kickoff to delivery. A website: 3-6 weeks. A full campaign with multiple deliverables: 4-8 weeks. We'll give you a clear timeline upfront and we stick to it.</p>
+                <summary>How long does a project take?</summary>
+                <p>Single video: 2-4 weeks. Website: 3-6 weeks. Full campaign with multiple deliverables: 4-8 weeks. We give a clear timeline upfront and stick to it.</p>
             </details>
             <details class="faq-item">
-                <summary>Do you work with clients outside Utah?</summary>
-                <p>Yes. We're based in Utah but work with brands everywhere. For video production that requires on-location shooting, we travel. For everything else (ads, web, social, strategy, consulting), location doesn't matter.</p>
+                <summary>Do you work outside Utah?</summary>
+                <p>Yes. We&rsquo;re based in Utah but work with brands everywhere. For on-location shoots, we travel. For ads, web, social, strategy, and consulting, location doesn&rsquo;t matter.</p>
             </details>
             <details class="faq-item">
-                <summary>Do I need to know what I need, or can you help figure that out?</summary>
-                <p>That's literally what the discovery call is for. Most clients come to us knowing something isn't working but not sure exactly what to do. We'll look at your current situation, identify the biggest opportunities, and recommend what will actually move the needle. No obligation.</p>
+                <summary>Do I need to know what I need?</summary>
+                <p>No. Most clients come knowing something isn&rsquo;t working but not exactly what to do. The discovery call is specifically for that. We&rsquo;ll identify the biggest opportunities and recommend what will move the needle.</p>
             </details>
             <details class="faq-item">
-                <summary>Can you just do one thing, or do I have to buy a full package?</summary>
-                <p>You can hire us for anything individually: just a video, just a website, just ad management. But the real value is when everything works together. We'll never pressure you into more than you need.</p>
+                <summary>Can I hire you for just one thing?</summary>
+                <p>Absolutely. Just a video, just a website, just ad management. But the real value is when everything works together. We&rsquo;ll never pressure you into more than you need.</p>
             </details>
         </div>
     </section>
@@ -313,8 +367,8 @@
     <section class="contact" id="contact">
         <div class="contact-inner">
             <div class="contact-text">
-                <h2>Let's figure out what your brand actually needs.</h2>
-                <p>Tell us about your project. We'll get back to you within 24 hours with honest feedback on whether we can help, and what it would look like.</p>
+                <h2 class="section-title">Let&rsquo;s figure out what<br>your brand <em>actually needs.</em></h2>
+                <p>Tell us about your project. We&rsquo;ll respond within 24 hours with honest feedback on whether we can help.</p>
                 <div class="contact-details">
                     <a href="mailto:hello@c41cinema.com" class="contact-email">hello@c41cinema.com</a>
                     <span class="contact-location">Based in Utah. Working everywhere.</span>
@@ -340,15 +394,15 @@
                     <option value="not-sure">Not sure yet</option>
                 </select>
                 <select name="budget" required>
-                    <option value="" disabled selected>Project budget range</option>
+                    <option value="" disabled selected>Budget range</option>
                     <option value="under-5k">Under $5,000</option>
                     <option value="5k-10k">$5,000 - $10,000</option>
                     <option value="10k-25k">$10,000 - $25,000</option>
                     <option value="25k+">$25,000+</option>
                     <option value="not-sure">Not sure yet</option>
                 </select>
-                <textarea name="message" placeholder="Tell us about your project and goals" rows="4" required></textarea>
-                <button type="submit">Send inquiry</button>
+                <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+                <button type="submit">Send inquiry &rarr;</button>
                 <span class="form-note">We respond within 24 hours. No spam, no sales pitch.</span>
             </form>
         </div>
@@ -356,7 +410,7 @@
 
     <!-- Sticky Mobile CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#contact" class="btn-primary">Start a project</a>
+        <a href="#contact" class="btn-primary">Start a project &rarr;</a>
     </div>
 
     <!-- Footer -->
@@ -379,7 +433,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2025 C41 Cinema. All rights reserved.</span>
+            <span>&copy; 2025 C41 Cinema</span>
         </div>
     </footer>
 
