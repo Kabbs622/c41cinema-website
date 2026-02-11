@@ -35,6 +35,25 @@
         });
     });
 
+    // Sticky mobile CTA - show after scrolling past hero, hide near contact
+    const stickyCta = document.getElementById('stickyCta');
+    const heroEl = document.querySelector('.hero');
+    const contactEl = document.getElementById('contact');
+    
+    if (stickyCta && heroEl) {
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
+            const contactTop = contactEl ? contactEl.offsetTop - window.innerHeight : Infinity;
+            const scrollY = window.scrollY;
+            
+            if (scrollY > heroBottom && scrollY < contactTop) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }, { passive: true });
+    }
+
     // Scroll-triggered fade-in animations
     const observerOptions = {
         threshold: 0.1,
@@ -62,7 +81,10 @@
         '.contact-text',
         '.contact-form',
         '.inline-quote',
-        '.stat'
+        '.stat',
+        '.faq-item',
+        '.lead-magnet-text',
+        '.lead-magnet-form'
     ];
 
     animateSelectors.forEach(selector => {
@@ -75,7 +97,7 @@
     });
 
     // Reset stagger per group (so each section starts from 0)
-    document.querySelectorAll('.work-grid, .services-grid, .process-grid, .testimonial-grid, .trust-stats').forEach(grid => {
+    document.querySelectorAll('.work-grid, .services-grid, .process-grid, .testimonial-grid, .trust-stats, .faq-list').forEach(grid => {
         grid.querySelectorAll('.fade-up').forEach((el, i) => {
             el.style.transitionDelay = `${i * 0.1}s`;
         });
