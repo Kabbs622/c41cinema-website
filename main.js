@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    // Nav scroll
+    // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 80);
@@ -25,7 +25,7 @@
         });
     });
 
-    // Smooth scroll
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', (e) => {
             const id = a.getAttribute('href');
@@ -35,17 +35,50 @@
         });
     });
 
-    // Parallax on hero images
-    const img1 = document.querySelector('.hero-img-1');
-    const img2 = document.querySelector('.hero-img-2');
-    
-    if (img1 && img2 && window.innerWidth > 900) {
-        window.addEventListener('scroll', () => {
-            const y = window.scrollY;
-            if (y < window.innerHeight) {
-                img1.style.transform = `translateY(${y * 0.08}px)`;
-                img2.style.transform = `translateY(${y * -0.05}px)`;
+    // Scroll-triggered fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
-        }, { passive: true });
-    }
+        });
+    }, observerOptions);
+
+    // Add fade-up class to elements and observe them
+    const animateSelectors = [
+        '.section-header',
+        '.work-card',
+        '.service-card',
+        '.process-step',
+        '.about-content',
+        '.about-image',
+        '.testimonial-card',
+        '.contact-text',
+        '.contact-form',
+        '.inline-quote',
+        '.stat'
+    ];
+
+    animateSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach((el, i) => {
+            el.classList.add('fade-up');
+            // Stagger siblings
+            el.style.transitionDelay = `${i * 0.08}s`;
+            observer.observe(el);
+        });
+    });
+
+    // Reset stagger per group (so each section starts from 0)
+    document.querySelectorAll('.work-grid, .services-grid, .process-grid, .testimonial-grid, .trust-stats').forEach(grid => {
+        grid.querySelectorAll('.fade-up').forEach((el, i) => {
+            el.style.transitionDelay = `${i * 0.1}s`;
+        });
+    });
+
 })();
