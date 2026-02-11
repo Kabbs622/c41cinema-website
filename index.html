@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C41 Cinema | Full-Service Creative Agency | Utah</title>
     <meta name="description" content="Utah's results-driven creative agency. Video production, ad campaigns, web design, and AI consulting. $5M+ in client revenue generated.">
-    
     <meta property="og:title" content="C41 Cinema | Full-Service Creative Agency">
     <meta property="og:description" content="Utah's results-driven creative agency. $5M+ in client revenue generated.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://c41cinema.com">
-    <meta property="og:image" content="https://c41cinema.com/assets/og-image.jpg">
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="C41 Cinema | Full-Service Creative Agency">
-    <meta name="twitter:description" content="Utah's results-driven creative agency. $5M+ in client revenue generated.">
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     <script type="application/ld+json">
@@ -29,122 +25,93 @@
         "name": "C41 Cinema",
         "description": "Full-service creative agency specializing in video production, ad campaigns, web design, and AI consulting",
         "url": "https://c41cinema.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Utah",
-            "addressCountry": "US"
-        },
-        "founder": { "@type": "Person", "name": "Kyle" },
-        "services": ["Video Production","Ad Campaigns","Web Design & Development","Social Media","Content Training","AI & Automation Consulting"]
+        "address": { "@type": "PostalAddress", "addressRegion": "Utah", "addressCountry": "US" },
+        "services": ["Video Production","Ad Campaigns","Web Design","Social Media","Content Training","AI Consulting"]
     }
     </script>
 </head>
 <body>
 
-    <!-- Film grain overlay -->
-    <div class="grain"></div>
-    
-    <!-- Letterbox bars (cinema feel) -->
-    <div class="letterbox letterbox-top"></div>
-    <div class="letterbox letterbox-bottom"></div>
-
     <!-- Nav -->
-    <header class="nav" id="nav">
-        <a href="#" class="nav-logo">C41</a>
-        <div class="nav-center">
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
+    <nav class="nav" id="nav">
+        <a href="#" class="logo">C41<span>CINEMA</span></a>
+        <div class="nav-right">
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-cta">Get in touch</a>
         </div>
-        <a href="#contact" class="nav-contact">Contact</a>
-        <button class="nav-toggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span>
         </button>
-    </header>
+    </nav>
 
-    <!-- Mobile nav overlay -->
-    <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-menu" id="mobileMenu">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Get in touch</a>
     </div>
 
     <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-inner">
-            <div class="hero-label anim-fade">Full-service creative agency / Utah</div>
-            <h1 class="hero-title">
-                <span class="anim-line">We make brands</span>
-                <span class="anim-line hero-italic">impossible</span>
-                <span class="anim-line">to ignore.</span>
+    <section class="hero">
+        <div class="hero-main">
+            <h1 class="hero-h1 anim">
+                <div class="hero-line">YOUR BRAND</div>
+                <div class="hero-line">DESERVES <span class="hero-outline">BETTER</span></div>
             </h1>
-            <div class="hero-bottom">
-                <div class="hero-stats anim-fade">
-                    <div class="hero-stat">
-                        <span class="hero-stat-num">$5M+</span>
-                        <span class="hero-stat-label">Revenue generated</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-num">9.5M</span>
-                        <span class="hero-stat-label">Views, single campaign</span>
-                    </div>
-                </div>
-                <a href="#work" class="hero-scroll anim-fade">
-                    <span class="hero-scroll-text">Scroll</span>
-                    <span class="hero-scroll-line"></span>
-                </a>
+        </div>
+        <div class="hero-bar anim-d1">
+            <div class="hero-bar-item">
+                <div class="bar-num">$5M+</div>
+                <div class="bar-label">Client revenue</div>
+            </div>
+            <div class="hero-bar-item">
+                <div class="bar-num">9.5M</div>
+                <div class="bar-label">Views, one campaign</div>
+            </div>
+            <div class="hero-bar-item hero-bar-desc">
+                <p>Video production. Ad campaigns. Websites. Strategy. One team that does it all and only cares about one thing: did it work.</p>
             </div>
         </div>
     </section>
 
     <!-- Work -->
     <section class="work" id="work">
-        <div class="section-label anim-fade">
-            <span class="label-num">01</span>
-            <span class="label-text">Selected Work</span>
-        </div>
-
-        <div class="work-list">
-            <a href="#" class="work-item anim-up">
-                <div class="work-item-inner">
-                    <div class="work-item-top">
-                        <span class="work-cat">Commercial</span>
-                        <span class="work-year">2024</span>
+        <div class="section-tag">Featured Work</div>
+        
+        <div class="work-grid">
+            <a href="#" class="work-block work-block-large anim">
+                <div class="work-block-bg"></div>
+                <div class="work-block-content">
+                    <div class="work-block-top">
+                        <span class="work-type">Commercial</span>
+                        <span class="work-result">9.5M views</span>
                     </div>
-                    <h2 class="work-name">Ozlo Sleep</h2>
-                    <div class="work-item-bottom">
-                        <span class="work-desc">A love story about snoring that hit 9.5 million views on YouTube.</span>
-                        <span class="work-metric">9.5M views</span>
-                    </div>
+                    <h2 class="work-title">OZLO SLEEP</h2>
+                    <p class="work-brief">A love story about snoring that hit 9.5 million views. Real emotion. Real product. Real results.</p>
                 </div>
             </a>
 
-            <a href="#" class="work-item anim-up">
-                <div class="work-item-inner">
-                    <div class="work-item-top">
-                        <span class="work-cat">Brand Campaign</span>
-                        <span class="work-year">2024</span>
+            <a href="#" class="work-block anim">
+                <div class="work-block-bg"></div>
+                <div class="work-block-content">
+                    <div class="work-block-top">
+                        <span class="work-type">Brand Campaign</span>
                     </div>
-                    <h2 class="work-name">Moontax</h2>
-                    <div class="work-item-bottom">
-                        <span class="work-desc">Making crypto taxes feel human. Real people, simple stories, clear answers.</span>
-                        <span class="work-metric">Campaign series</span>
-                    </div>
+                    <h2 class="work-title">MOONTAX</h2>
+                    <p class="work-brief">Making crypto taxes feel human.</p>
                 </div>
             </a>
 
-            <a href="#" class="work-item anim-up">
-                <div class="work-item-inner">
-                    <div class="work-item-top">
-                        <span class="work-cat">Product</span>
-                        <span class="work-year">2024</span>
+            <a href="#" class="work-block anim">
+                <div class="work-block-bg"></div>
+                <div class="work-block-content">
+                    <div class="work-block-top">
+                        <span class="work-type">Product</span>
                     </div>
-                    <h2 class="work-name">Hella Roller</h2>
-                    <div class="work-item-bottom">
-                        <span class="work-desc">A funny, fast product demo that made a back roller unforgettable.</span>
-                        <span class="work-metric">Product launch</span>
-                    </div>
+                    <h2 class="work-title">HELLA ROLLER</h2>
+                    <p class="work-brief">Product demos, but actually entertaining.</p>
                 </div>
             </a>
         </div>
@@ -152,86 +119,75 @@
 
     <!-- Services -->
     <section class="services" id="services">
-        <div class="section-label anim-fade">
-            <span class="label-num">02</span>
-            <span class="label-text">Services</span>
-        </div>
+        <div class="section-tag">What We Do</div>
+        <h2 class="services-headline anim">THE FULL STACK.</h2>
 
-        <div class="services-list">
-            <div class="service anim-up">
-                <span class="service-idx">01</span>
-                <div class="service-body">
-                    <h3>Video Production</h3>
-                    <p>Commercials, branded content, social ads. We tell your story in a way that makes people stop scrolling and start buying.</p>
-                </div>
+        <div class="services-grid">
+            <div class="svc anim">
+                <div class="svc-num">01</div>
+                <h3>VIDEO PRODUCTION</h3>
+                <p>Commercials, branded content, social ads. We tell stories that make people stop scrolling and start buying.</p>
             </div>
-            <div class="service anim-up">
-                <span class="service-idx">02</span>
-                <div class="service-body">
-                    <h3>Ad Campaigns</h3>
-                    <p>Strategy, media buying, performance tracking. We spend your budget like it's ours and optimize for real returns.</p>
-                </div>
+            <div class="svc anim">
+                <div class="svc-num">02</div>
+                <h3>AD CAMPAIGNS</h3>
+                <p>Strategy, media buying, performance tracking. We spend your budget like it's ours and optimize for real returns.</p>
             </div>
-            <div class="service anim-up">
-                <span class="service-idx">03</span>
-                <div class="service-body">
-                    <h3>Web Design & Development</h3>
-                    <p>Websites that convert. Clean design, fast performance, built to turn traffic into revenue.</p>
-                </div>
+            <div class="svc anim">
+                <div class="svc-num">03</div>
+                <h3>WEB DESIGN</h3>
+                <p>Websites that convert. Clean, fast, built to turn traffic into revenue. Not templates. Custom builds.</p>
             </div>
-            <div class="service anim-up">
-                <span class="service-idx">04</span>
-                <div class="service-body">
-                    <h3>Social Media</h3>
-                    <p>Content people actually want to see. We create, manage, and grow your presence where your audience lives.</p>
-                </div>
+            <div class="svc anim">
+                <div class="svc-num">04</div>
+                <h3>SOCIAL MEDIA</h3>
+                <p>Content people actually want to see. We create, manage, and grow your presence where your audience lives.</p>
             </div>
-            <div class="service anim-up">
-                <span class="service-idx">05</span>
-                <div class="service-body">
-                    <h3>Content Training</h3>
-                    <p>Not ready for a retainer? We'll spend a day with your team teaching you to shoot and create your own content. When you're ready to scale, we're here.</p>
-                </div>
+            <div class="svc anim">
+                <div class="svc-num">05</div>
+                <h3>CONTENT TRAINING</h3>
+                <p>We spend a day with your team teaching you to create your own content. Build the skill. Build the relationship.</p>
             </div>
-            <div class="service anim-up">
-                <span class="service-idx">06</span>
-                <div class="service-body">
-                    <h3>AI Consulting</h3>
-                    <p>The tools are here. Most businesses don't know how to use them. We help you integrate AI into your workflow so you can move faster and spend less.</p>
-                </div>
+            <div class="svc anim">
+                <div class="svc-num">06</div>
+                <h3>AI CONSULTING</h3>
+                <p>Most businesses don't know how to use the tools that already exist. We help you integrate AI so you move faster and spend less.</p>
             </div>
         </div>
     </section>
 
     <!-- About -->
     <section class="about" id="about">
-        <div class="section-label anim-fade">
-            <span class="label-num">03</span>
-            <span class="label-text">About</span>
-        </div>
-
-        <div class="about-content">
-            <h2 class="about-headline anim-up">We started C41 because too many agencies make beautiful work that doesn't sell anything.</h2>
-            <div class="about-body anim-up">
-                <p>Every project starts with one question: what does this need to do for your business? Not what looks cool. Not what wins awards. What actually moves the needle.</p>
-                <p>We've generated over $5 million in revenue for clients. One campaign alone pulled 9.5 million views on YouTube. We got there by caring more about results than reels.</p>
-                <p>Based in Utah. Working with brands everywhere. Small team, no overhead, no fluff.</p>
+        <div class="section-tag">About C41</div>
+        <div class="about-grid">
+            <div class="about-left anim">
+                <h2>WE ONLY CARE ABOUT ONE THING.</h2>
+            </div>
+            <div class="about-right anim">
+                <p class="about-lead">Did it work?</p>
+                <p>Too many agencies create beautiful content that doesn't move the needle. We started C41 because we think that's a waste of everyone's time and money.</p>
+                <p>Every project starts with a business goal. Every decision serves that goal. We've generated over $5 million in client revenue because we refuse to make anything that just "looks cool."</p>
+                <p>Small team. No overhead. Based in Utah, working with brands everywhere.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <div class="contact-inner">
-            <div class="contact-left anim-up">
-                <h2>Let's make<br>something.</h2>
-                <p class="contact-sub">Tell us what you need. We'll get back to you within 24 hours.</p>
+        <div class="contact-top anim">
+            <h2>LET'S TALK.</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info anim">
+                <p>Tell us what you're working on. If we're a fit, we'll tell you. If we're not, we'll tell you that too.</p>
             </div>
-            <form class="contact-form anim-up" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
+            <form class="contact-form anim" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://kabbs622.github.io/c41cinema-website/thank-you.html">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
                 <input type="text" name="company" placeholder="Company">
                 <select name="service" required>
                     <option value="">What do you need?</option>
@@ -241,27 +197,27 @@
                     <option value="Social Media">Social Media</option>
                     <option value="Content Training">Content Training</option>
                     <option value="AI Consulting">AI Consulting</option>
+                    <option value="Not Sure">Not sure yet</option>
                 </select>
-                <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
-                <button type="submit">Send it</button>
+                <textarea name="message" placeholder="What are you working on?" rows="3" required></textarea>
+                <button type="submit">SEND IT</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
-            <span class="footer-logo">C41 Cinema</span>
-            <div class="footer-links">
+        <div class="footer-main">
+            <span class="footer-logo">C41 CINEMA</span>
+            <div class="footer-nav">
                 <a href="#work">Work</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <span>&copy; 2025 C41 Cinema</span>
-            <span>Utah</span>
+        <div class="footer-sub">
+            <span>&copy; 2025 C41 Cinema. Utah.</span>
         </div>
     </footer>
 

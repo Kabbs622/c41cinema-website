@@ -1,69 +1,49 @@
-// ============================================
-// C41 Cinema — v3
-// ============================================
-
 (function() {
     'use strict';
 
     // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                obs.unobserve(e.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.anim-fade, .anim-up').forEach(el => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.anim, .anim-d1').forEach(el => obs.observe(el));
 
-    // Nav scroll state
+    // Nav scroll
     const nav = document.getElementById('nav');
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y > 100) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-        lastScroll = y;
+        nav.classList.toggle('scrolled', window.scrollY > 80);
     }, { passive: true });
 
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const mobileNav = document.getElementById('mobileNav');
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
 
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-            toggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        });
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    });
 
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                toggle.classList.remove('active');
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-    }
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            const id = link.getAttribute('href');
-            if (id === '#') return;
-            const target = document.querySelector(id);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
 
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            const id = a.getAttribute('href');
+            if (id === '#') return;
+            const t = document.querySelector(id);
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+        });
+    });
 })();
