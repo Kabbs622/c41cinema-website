@@ -291,6 +291,40 @@ img { display: block; max-width: 100%; }
     background: var(--border);
 }
 
+/* ===== CLIENT LOGO MARQUEE ===== */
+.logo-marquee {
+    margin-top: 3rem;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    width: max-content;
+    animation: logoScroll 40s linear infinite;
+}
+
+.logo-track img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.5;
+    filter: grayscale(1) brightness(2);
+    transition: opacity 0.3s;
+}
+
+.logo-track img:hover {
+    opacity: 0.9;
+}
+
+@keyframes logoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* ===== WORK ===== */
 .work {
     padding: var(--section-pad) var(--page-pad);
