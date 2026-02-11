@@ -1,0 +1,15 @@
+# Favicon Placeholder
+
+This is a placeholder for the C41 Cinema favicon.ico file.
+
+To create the actual favicon:
+1. Design a 16x16 or 32x32 pixel icon using the C41 brand colors (red #C41230 on dark background)
+2. Save as favicon.ico
+3. Replace this placeholder file
+4. Update the HTML <link rel="icon"> reference if needed
+
+The favicon should incorporate:
+- C41 branding elements
+- Dark background (#0a0a0a)
+- Red accent color (#C41230)
+- Clean, minimal design that works at small sizes
