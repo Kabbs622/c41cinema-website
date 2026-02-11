@@ -113,4 +113,28 @@
         });
     });
 
+    // Logo marquee - seamless infinite scroll
+    const track = document.getElementById('logoTrack');
+    if (track) {
+        // Clone all children for seamless loop
+        const items = Array.from(track.children);
+        items.forEach(item => track.appendChild(item.cloneNode(true)));
+        
+        let pos = 0;
+        const speed = 0.5; // px per frame
+        
+        function scrollLogos() {
+            pos -= speed;
+            // Reset when first set is fully scrolled out
+            const halfWidth = track.scrollWidth / 2;
+            if (Math.abs(pos) >= halfWidth) pos = 0;
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(scrollLogos);
+        }
+        
+        // Wait for images to load so scrollWidth is accurate
+        Promise.all(items.map(img => img.complete ? Promise.resolve() : new Promise(r => { img.onload = r; img.onerror = r; })))
+            .then(() => requestAnimationFrame(scrollLogos));
+    }
+
 })();

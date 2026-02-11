@@ -304,7 +304,7 @@ img { display: block; max-width: 100%; }
     align-items: center;
     gap: 3.5rem;
     width: max-content;
-    animation: logoScroll 40s linear infinite;
+    will-change: transform;
 }
 
 .logo-track img {
@@ -314,15 +314,11 @@ img { display: block; max-width: 100%; }
     opacity: 0.5;
     filter: grayscale(1) brightness(2);
     transition: opacity 0.3s;
+    flex-shrink: 0;
 }
 
 .logo-track img:hover {
     opacity: 0.9;
-}
-
-@keyframes logoScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
 
 /* ===== WORK ===== */
